@@ -53,6 +53,12 @@ When changing MXC sandboxing, `system.run`, exec approvals, Windows node command
 
 The script sets `OPENCLAW_RUN_E2E` and `OPENCLAW_RUN_MXC_E2E` itself, then runs the real WSL Gateway -> Windows node -> `system.run` MXC E2E proofs. It fails if the MXC proof skips. Use `-AllowSkip` only to document that the current host is not MXC-capable; do not report an `-AllowSkip` run as merge validation for MXC-related work.
 
+## Coding rules
+
+- Keep methods focused and reduce nested control flow when it improves readability.
+- Prefer existing repository patterns and simple, idiomatic C# over speculative abstractions.
+- Document non-obvious ownership, invariants, and public usage. Avoid boilerplate comments that only repeat the code.
+
 ## UI, MCP, and PR Proof
 
 Use `.agents/skills/openclaw-proof-validation/SKILL.md` when a change touches tray UX, Settings, onboarding, chat/canvas, Command Center, Windows node capabilities, MCP, gateway connection/pairing, permissions, diagnostics, or agent-facing instructions.
